@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-<link rel="stylesheet" href="principal.css">
+
   <title>Principal</title>
 </head>
 
@@ -22,8 +22,11 @@
     <div class="container-fluid">
       <div id="page-content-wrapper justify-content-md-end">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom ">
-          <button class="btn btn-danger" id="menu-toggle">Menu</button>
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger border-bottom ">
+        <a class="navbar" href="#">
+        <img src="/proyecto/Cine_web/img/cine_plus.png" width="25%" height="5%" class=" d-inline-block  align-left" alt="" loading="lazy" type="button">
+      </a>
+        
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
