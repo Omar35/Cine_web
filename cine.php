@@ -9,12 +9,15 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+<link rel="stylesheet" href="principal.css">
   <title>Principal</title>
 </head>
 
-<body>
+<body >
   <form action="">
+  
+
+    </div>
 
     <div class="container-fluid">
       <div id="page-content-wrapper justify-content-md-end">
@@ -45,28 +48,29 @@
     </div>
     <div class="container-fluid">
       <div class="row ">
-        <div class="col-1">
+        <div class="col-2">
           <div class="d-flex" id="wrapper">
             <div class="bg-light border-right" id="sidebar-wrapper">
               <div class="sidebar-heading">CINEPLUS</div>
-              <div class="list-group list-group-flush">
+               <div class="list-group list-group-flush">
                 <?php include 'menu.php';?>
-              </div>
-            </div>
-
-
+               </div>
+              
           </div>
-          <div class="col-10">
-
+         
           </div>
+        </div>
+
+        <div class="col-9">
+          
+           
 
         </div>
       </div>
 
   </form>
 
-
-
+  
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
