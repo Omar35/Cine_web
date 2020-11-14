@@ -44,12 +44,24 @@ CloseCon($abrirCon);
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <?php
+                if(isset($_GET['user']))
+                  {	
+                    $usuario = $_GET['user'];
+                    echo '<p style="padding: 0.5rem; margin: 0;"> Hola '. $usuario .'!</p>';
+                  }
+                else {
+                  echo '<a class="nav-link" href="login.php">SIGN IN</a>';
+                }
+                ?> 
+              </li>
               <li class="nav-item active">
                 <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="login.html">SIGN IN</a>
-              </li>
+              </li> -->
 
               <li>
               </li>

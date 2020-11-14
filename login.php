@@ -1,3 +1,35 @@
+<?php
+
+    include 'connDB.php';
+    $abirCon = OpenCon();
+    
+    if(isset($_POST['btnLogin']))
+	{	
+		$username = $_POST['username'];
+        $password = $_POST['password'];
+        
+		$sqlQueryLogin = "call usuarioAutenticacion('$username','$password')";
+        $result = $abirCon-> query($sqlQueryLogin);
+		if($result->num_rows > 0)
+		{
+            $usuario = "";
+            while($fila = mysqli_fetch_array($result)){
+                $usuario = $fila["user_name"];
+            }
+			header("Location: cine.php?user=$usuario");
+		}
+		else
+		{
+			echo $abirCon -> error;	
+		}
+    }
+    
+    CloseCon($abirCon);
+
+?>
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,7 +55,7 @@
     
   </head>
   <body>
-   
+
 
     <div class="container " >
         <div class="d-flex justify-content-center h-100">
@@ -33,25 +65,40 @@
                     
                 </div>
                 <div class="card-body">
-                    <form action="cine.php" method="POST">  
+                    <!-- <form action="cine.php" method="POST">   -->
+                    <form action="" method="POST">
                         <div class="input-group form-group">
                             <div class="input-group-prepend ">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="username">
+                            <input type="text" class="form-control" placeholder="username" name="username">
                             
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="password">
+                            <input type="password" class="form-control" placeholder="password" name="password">
                         </div>
                         <div class="row align-items-center remember">
                             <input type="checkbox">Remember Me
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Login" class="btn float-right login_btn">
+                            <input type="submit" value="Login" class="btn float-right login_btn" name="btnLogin">
+                        </div>
+                        <div class="row align-items-center">
+                        <?php
+                            if(isset($result)){
+                                if( $result ->num_rows == 0)
+                                {
+                                    echo '<tr>';
+                                    echo '<td colspan="7">Usuario o Contraseña incorrecta</td>';
+                                    echo '</tr>';
+                                }
+                            }
+                            
+                        
+                        ?>
                         </div>
                     </form>
                 </div>
