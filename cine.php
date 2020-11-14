@@ -1,3 +1,15 @@
+
+<?php
+include 'connDB.php';
+$abrirCon = OpenCon();
+
+CloseCon($abrirCon);
+
+?> 
+
+
+
+
 <!doctype html>
 <html lang="en">
 
