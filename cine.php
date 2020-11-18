@@ -68,13 +68,13 @@
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Wonder Woman 1984</div>
-        <img src="/proyecto/Cine_web/media/WonderWoman.jpg" alt="House" style="width:100%">
+        <img src="/proyecto/Cine_web/media/Wonder Woman 1984.jpg" alt="House" style="width:100%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Sherlock Holmes 3</div>
-        <img src="/proyecto/Cine_web/media/Sherlock.jpg" alt="House" style="width:100%">
+        <img src="/proyecto/Cine_web/media/Sherlock Holmes 3.jpg" alt="House" style="width:100%">
       </div>
     </div>
   </div>
@@ -83,13 +83,13 @@
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Black Widow</div>
-        <img src="/proyecto/Cine_web/media/BlackWidow.jpg" alt="House" style="width:99%">
+        <img src="/proyecto/Cine_web/media/Black Widow.jpg" alt="House" style="width:99%">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">The Conjuring</div>
-        <img src="/proyecto/Cine_web/media/Conjuring.jpg" alt="House" style="width:99%">
+        <img src="/proyecto/Cine_web/media/The Conjuring.jpg" alt="House" style="width:99%">
       </div>
     </div>
   </div>
