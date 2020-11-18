@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -24,7 +27,17 @@
     <div class="w3-right w3-hide-small">
       <a href="cartelera.php" class="w3-bar-item w3-button">Cartelera</a>
       <a href="sucursales.php" class="w3-bar-item w3-button">Sucursales</a>
-      <a href="login.php" class="w3-bar-item w3-button">Iniciar Sesión</a>
+      <?php
+
+      if(isset($_GET['user']))
+      {	
+        $usuario = $_GET['user'];
+      echo '<p class="w3-bar-item w3-button">Bienvenido ' . $usuario .'</p>';
+      }else{
+        echo '<a href="login.php" class="w3-bar-item w3-button">Iniciar Sesión</a>';
+      }
+      ?>
+      
     </div>
   </div>
 </div>
