@@ -1,8 +1,47 @@
 <?php
-include 'connDB.php';
-$abrirCon = OpenCon();
 
-CloseCon($abrirCon);
+    include 'connDB.php';
+    $abirCon = OpenCon();
+    $abirCon2 = OpenCon();
+    
+    if(isset($_POST['btnRegistro']))
+	{	
+		$nombre = $_POST['nombre'];
+        $apellido1 = $_POST['apellido1'];
+        $apellido2 = $_POST['apellido2'];
+        $telefono = $_POST['telefono'];
+        $correo = $_POST['correo'];
+        $contrasena = $_POST['contrasena'];
+        
+        $sqlQueryRegistrarUsuarioSeguridad= "call registrarUsuarioSeguridad('$correo','$contrasena')";
+        
+        $result = $abirCon-> query($sqlQueryRegistrarUsuarioSeguridad);
+		if($result->num_rows > 0)
+		{
+            
+            $user_id = 0;
+            while($fila = mysqli_fetch_array($result)){
+                $user_id = $fila["user_id"];
+            }
+            
+            $sqlQueryRegistrarUsuarioData= "call registrarUsuarioData('$nombre','$apellido1','$apellido2','$telefono','$user_id')";
+            
+            if($abirCon2-> query($sqlQueryRegistrarUsuarioData)){
+                header("Location: login.php");
+            }
+            else
+            {
+                echo $abirCon2 -> error;	
+            }
+		}
+		else
+		{
+			echo $abirCon -> error;	
+		}
+    }
+    
+    CloseCon($abirCon);
+    CloseCon($abirCon2);
 
 ?>
 <!doctype html>
@@ -17,7 +56,7 @@ CloseCon($abrirCon);
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="/proyecto/Cine_web/css/estilo/registro.css">
-    <title>Hello, world!</title>
+    <title>Registro</title>
 </head>
 
 <body class="">
@@ -70,7 +109,7 @@ CloseCon($abrirCon);
 
                                 <div class="form-group justify-content-center">
                                     <div class="col-md-12 text-center">
-                                        <button type="submit" class="btn btn-danger btn-lg">Registrar</button>
+                                        <button type="submit" class="btn btn-danger btn-lg" name="btnRegistro">Registrar</button>
                                     </div>
                                 </div>
                             
