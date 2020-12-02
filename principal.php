@@ -27,12 +27,10 @@
         <div class="header-overlay">
             <br><br><br><br><br><br><br><br><br>
             <div class="header-content ">
-                <h1>Bienvenidos y bienvanidas a CinePlus</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea error quae iure deserunt quidem. Ad
-                    blanditiis itaque natus non debitis eius, quos quisquam doloribus necessitatibus ratione voluptatum
-                    ex, cupiditate in!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ex blanditiis dolorem nam error, accusamus nulla quo accusantium. Nostrum fuga labore iure quisquam! Eaque facilis quaerat sequi fuga hic perferendis delectus tempore. Aperiam animi odio repellendus quas voluptates! Minima aliquam labore quaerat, porro accusantium recusandae vero assumenda modi impedit error, quis, asperiores voluptatem nulla iusto ab ducimus laudantium? Accusamus unde inventore optio architecto tempore nihil, tenetur qui nesciunt cupiditate in, adipisci, molestiae ipsa praesentium odit incidunt ab quis amet est nam. Reiciendis eligendi minima modi, consequuntur recusandae exercitationem voluptatum fugiat vel aspernatur. Sit recusandae rem consequatur ea. Delectus, accusamus excepturi?</p>
-                <a href="login.php" class="btn btn-secondary">Ingresar</a>
+                
+                <br><br><br><br><br><br><br><br><br>
+               
+                <a href="cartelera.php" class="btn btn-danger">Cartelera CinePlus</a>
             </div>
         </div>
     </header>
