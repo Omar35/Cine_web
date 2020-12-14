@@ -125,20 +125,6 @@
     
   </div>
 
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-32" id="contact">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contáctenos</h3>
-    <p>Completa los siguientes espacios para saber de ti.</p>
-    <form action="/action_page.php" target="_blank">
-      <input class="w3-input w3-border" type="text" placeholder="Nombre" required name="Nombre">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Correo" required name="Correo">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Tema" required name="Tema">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Comentario" required name="Comentario">
-      <button class="w3-button w3-black w3-section" type="submit">
-        <i class="fa fa-paper-plane"></i> ENVIAR
-      </button>
-    </form>
-  </div>
   
 <!-- Image of location/map -->
 <div class="w3-container">

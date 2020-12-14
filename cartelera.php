@@ -14,50 +14,46 @@
 
     <!-- Custom styles for this template -->
     <link href="./css/estilo/cartelera.css" rel="stylesheet">
+
+     <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link rel="stylesheet" href="principal.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Cartelera</title>
   </head>
 
   <body>
 
-    <header>
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About</h4>
-              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                <li><a href="#" class="text-white">Like on Facebook</a></li>
-                <li><a href="#" class="text-white">Email me</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="cine.php" class="navbar-brand d-flex align-items-center">
-          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-film" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0h8v6H4V1zm8 8H4v6h8V9zM1 1h2v2H1V1zm2 3H1v2h2V4zM1 7h2v2H1V7zm2 3H1v2h2v-2zm-2 3h2v2H1v-2zM15 1h-2v2h2V1zm-2 3h2v2h-2V4zm2 3h-2v2h2V7zm-2 3h2v2h-2v-2zm2 3h-2v2h2v-2z"/>
-          </svg>
-            <strong>Cine Plus</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
-    </header>
+    <div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="cine.php" class="w3-bar-item w3-button"><b>CINEPLUS</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="cartelera.php" class="w3-bar-item w3-button">Cartelera</a>
+      <a href="sucursales.php" class="w3-bar-item w3-button">Sucursales</a>
+      <?php
+
+      if(isset($_GET['user']))
+      {	
+        $usuario = $_GET['user'];
+      echo '<p class="w3-bar-item w3-button">Bienvenido ' . $usuario .'</p>';
+      }else{
+        echo '<a href="login.php" class="w3-bar-item w3-button">Iniciar Sesión</a>';
+      }
+      ?>
+      
+    </div>
+  </div>
+</div>
+
 
     <main role="main">
 
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">CINEPLUS Cartelera</h1>
-          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+          <p class="lead text-muted">A continuación se muestran las películas disponibles en cartelera.</p>
           <p>
             <a href="#" class="btn btn-success">Comprar entradas</a>
             
@@ -153,5 +149,8 @@
     <script src="./js/vendor/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/vendor/holder.min.js"></script>
+
+
+    
   </body>
 </html>

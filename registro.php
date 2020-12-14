@@ -88,7 +88,7 @@
                                     </div>
                                     <br>
                                     <div >
-                                        <input hover id="txtTelefono" name="telefono" type="number" placeholder="Telefono"
+                                        <input hover id="txtTelefono" name="telefono" type="text" placeholder="Telefono"
                                             class="form-control">
                                     </div>
                                     <br>
@@ -98,7 +98,7 @@
                                     </div>
                                     <br>
                                     <div >
-                                        <input hover id="txtContrasena" name="contrasena" type="text" placeholder="Contraseña" 
+                                        <input hover id="txtContrasena" name="contrasena" type="password" placeholder="Contraseña" 
                                             class="form-control">
                                     </div>
                                     <br>
