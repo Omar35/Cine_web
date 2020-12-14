@@ -108,19 +108,16 @@
       <img src="/proyecto/Cine_web/media/Omar.png"  style="width:100%">
       <h3>Omar Herrera</h3>
       <p class="w3-opacity">CEO & Fundador</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contactar</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <img src="/proyecto/Cine_web/media/Girls.png"  style="width:100%">
       <h3>Nathalia Hernandez</h3>
       <p class="w3-opacity">CEO & Fundadora</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contactar</button></p>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <img src="/proyecto/Cine_web/media/Girls.png"  style="width:100%">
       <h3>Maria Jose Uribe</h3>
       <p class="w3-opacity">CEO & Fundadora</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contactar</button></p>
     </div>
     
   </div>
