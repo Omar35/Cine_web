@@ -55,7 +55,7 @@
           <h1 class="jumbotron-heading">CINEPLUS Cartelera</h1>
           <p class="lead text-muted">A continuación se muestran las películas disponibles en cartelera.</p>
           <p>
-            <a href="#" class="btn btn-success">Comprar entradas</a>
+            <a href="compra.php" class="btn btn-success">Comprar entradas</a>
             
           </p>
         </div>
