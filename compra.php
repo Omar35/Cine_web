@@ -11,7 +11,7 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <link rel="stylesheet" href="principal.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <title>Principal</title>
+  <title>Compra</title>
 </head>
 <body>
 
