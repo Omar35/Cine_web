@@ -94,17 +94,14 @@
     
 
     <title>Compra</title>
-
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="principal.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <!-- Bootstrap core CSS -->
-    <!--<link href="../css/bootstrap.min.css" rel="stylesheet"> -->
-
-    <!-- Custom styles for this template -->
-    <!--<link href="form-validation.css" rel="stylesheet"> -->
+    
+    
   </head>
 
   <body class="bg-light">
@@ -157,7 +154,7 @@
 				        ?>
                 
                 <div class="invalid-feedback" style="width: 100%;">
-                  Your username is required.
+                  El usuario se necesita.
                 </div>
               </div>
             </div>
@@ -188,10 +185,9 @@
             <hr class="mb-4">
             
             
-            <input type="submit"  class="btn btn-success" name="btnConfirmarReserva" value="Confirmar Reservar" />
+            <input type="submit"  class="btn btn-danger" name="btnConfirmarReserva" value="Confirmar Reservar" />
             <hr class="mb-4">
             <?php
-            
               if(isset($idNewReservaArray)){
                 if( $idNewReservaArray ->num_rows>0)
                                 {
@@ -199,25 +195,19 @@
                   echo '<div class="alert alert-primary" role="alert">
                   ' . $usuario .' ha reservado: '. $cantidadAsientos .' asientos. Total a pagar: '. $total .'</div>';
                 }
-              }
-                            
-                        
+              }         
             ?>
             
             <hr>
 
-            
           </form>
         </div>
       </div>
 
-      
     </div>
 
     <footer class="w3-center w3-black w3-padding-16">
       <p>Gracias por preferirnos!</a></p>
-      
-       <!-- <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p> -->
     </footer>
 
     <!-- Bootstrap core JavaScript

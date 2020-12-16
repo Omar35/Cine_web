@@ -87,7 +87,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <input type="submit" value="Continuar" class="btn btn-right login_btn" name="btnLogin">
+                            <input type="submit" value="Continuar" class="btn float-right login_btn" name="btnLogin">
                             
                         </div>
                         <div class="row align-items-center">
@@ -96,7 +96,8 @@
                                 if( $result ->num_rows == 0)
                                 {
                                     echo '<tr>';
-                                    echo '<td colspan="7">Usuario o Contraseña incorrecta</td>';
+                                    
+                                    echo '<a class="text-light">Usuario o Contraseña incorrecta</a>';
                                     echo '</tr>';
                                 }
                             }
@@ -108,7 +109,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="d-flex justify-content-center links">
-                        No tienes una cuenta?<a href="registro.php" class="text-danger">Registrarme</a>
+                        No tienes una cuenta?<a href="registro.php" class="text-warning">Registrarme</a>
                     </div>
                     
                 </div>

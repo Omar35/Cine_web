@@ -30,7 +30,7 @@
                 
                 <br><br><br><br><br><br><br><br><br>
                
-                <a href="cartelera.php" class="btn btn-danger">Cartelera CinePlus</a>
+                <a href="cartelera.php" class="btn btn-danger">Cartelera CINEPLUS</a>
             </div>
         </div>
     </header>
