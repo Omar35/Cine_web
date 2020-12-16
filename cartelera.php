@@ -55,7 +55,7 @@
           <h1 class="jumbotron-heading">CINEPLUS Cartelera</h1>
           <p class="lead text-muted">A continuación se muestran las películas disponibles en cartelera.</p>
           <p>
-            <a href="compra.php" class="btn btn-success">Comprar entradas</a>
+            <a href="#" class="btn btn-success">Comprar entradas</a>
             
           </p>
         </div>
@@ -133,12 +133,9 @@
 
  
     <footer class="w3-center w3-black w3-padding-16">
-  <p>Gracias por preferirnos!</a></p>
-</footer>
-        </p>
-        
+      <p>Gracias por preferirnos!</a></p>
+      
        <!-- <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p> -->
-      </div>
     </footer>
 
     <!-- Bootstrap core JavaScript
