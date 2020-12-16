@@ -12,39 +12,68 @@
       $listaTandas = $conn -> query($tandas);
   }
 
+  CloseCon($conn);
+
+   $usuarioID=0;
   if(isset($_GET['user']))
   {	
+    $conn = OpenCon();
     $usuario = $_GET['user'];
-  }else{
-    $usuario="NOUSER";
+    $procUser = "CALL MostrarUsuario('" . $usuario . "')";
+    $usuarioIDArray = $conn -> query($procUser);
+    echo "<script>console.log('Debug Objects: " . $usuario . "' );</script>";
+    CloseCon($conn);
+    while($fila = mysqli_fetch_array($usuarioIDArray))
+    {
+      $usuarioID = $fila["user_id"];
+    }	
   }
 
-  CloseCon($conn);
+  
 
   $conn = OpenCon();
   if(isset($_POST['btnConfirmarReserva']))
 	{
-    $userID = $_POST['cboUsuario'];
+    
     $proyeccionID = $_POST['cboTandas'];
     $listaAsientos = $_POST['multiAsientos'];
     $cantidadAsientos = count($listaAsientos);
-    $listaAsientosString = implode(",",$listaAsientos);
     
-    echo "<script>console.log('Debug Objects: " . $listaAsientosString . "' );</script>";
+    
+    //echo "<script>console.log('Debug Objects: " . $listaAsientosString . "' );</script>";
 		
-		$procReserva = "call ConfirmarReserva($userID, $proyeccionID,$cantidadAsientos,$listaAsientosString)";
-		$conn -> next_result();
+		$procReserva = "call ConfirmarReserva($usuarioID, $proyeccionID,$cantidadAsientos)";
 		
-		if($conn -> query($procReserva))
+    
+    $idNewReservaArray = $conn -> query($procReserva);
+    //echo "<script>console.log('Debug Objects: " . $idNewReservaArray . "' );</script>";
+    CloseCon($conn);
+
+    $idNewReserva = 0;
+    while($fila = mysqli_fetch_array($idNewReservaArray))
+    {
+      //echo "<script>console.log('Debug Objects: " . $fila[0] . "' );</script>";
+      $idNewReserva = $fila[0];
+    }	
+
+    echo "<script>console.log('Debug Objects: " . $idNewReserva . "' );</script>";
+		if($idNewReserva)
 		{
-			header("Location: compra.php?user=$usuario&id_peli=$pelicula");
+      foreach ($listaAsientos as $value){
+        $conn = OpenCon();
+        $procAsientoReserva = "call RegistrarAsientoReserva($idNewReserva, '" . $value . "')";
+        echo "<script>console.log('Debug Objects: " . $value . "' );</script>";
+        $conn -> query($procAsientoReserva);
+        CloseCon($conn);
+      }
+      //header("Location: compra.php?user=$usuario&id_peli=$pelicula");
 		}
 		else		
 		{
-			echo "Error:" . $conn->error;			
+			echo "Error:" ;			
 		}
   }
-  CloseCon($conn);
+  
 
   $conn = OpenCon();
   $asientos = "CALL MostrarAsientos()"; 
@@ -52,9 +81,6 @@
 
 
   CloseCon($conn);
-
-
-
   ?>
   
 <!doctype html>

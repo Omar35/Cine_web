@@ -103,12 +103,10 @@
                     </form>
                 </div>
                 <div class="card-footer">
-                    <div class="d-flex justify-content-center links">
-                        No tienes una cuenta?<a href="registro.php">Registrarme</a>
+                    <div class="d-flex justify-content-center links text-danger">
+                        No tienes una cuenta?<a href="registro.php" class="text-danger">Registrarme</a>
                     </div>
-                    <div class="d-flex justify-content-center">
-                        <a href="#">Olvidaste la contraseña?</a>
-                    </div>
+                    
                 </div>
             </div>
         </div>
