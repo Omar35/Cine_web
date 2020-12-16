@@ -24,7 +24,9 @@
     <div class="w3-right w3-hide-small">
       <a href="cartelera.php" class="w3-bar-item w3-button">Cartelera</a>
       <a href="sucursales.php" class="w3-bar-item w3-button">Sucursales</a>
-      <a href="login.php" class="w3-bar-item w3-button">Iniciar Sesión</a>
+      <a href="cine.php" class="w3-bar-item w3-button">Sobre Nosotros</a>
+      
+      
     </div>
   </div>
 </div>
@@ -75,41 +77,23 @@
   <div class="w3-row-padding" id="plans">
     <div class="w3-center w3-padding-64">
       <h3>Tarifas</h3>
-      <p>Contamos con 3 categorías</p>
+      <p>Semana de Ignaguración!! Tarifa única!</p>
     </div>
 
-    <div class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Niños</li>
-        <img src="/proyecto/Cine_web/media/kids.jpg" style="width:100%">
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">₡2500</h2>
-          <span class="w3-opacity">*impuestos incluidos*</span>
-        </li>
-      </ul>
-    </div>
+    
 
-    <div class="w3-third w3-margin-bottom">
+    <div class="w3-center w3-margin-bottom">
       <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-        <li class="w3-dark-grey w3-xlarge w3-padding-32">Adultos</li>
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Todo Púlico</li>
         <img src="/proyecto/Cine_web/media/adults.jpg" style="width:100%">
         <li class="w3-padding-16">
-          <h2 class="w3-wide">₡3200</h2>
-          <span class="w3-opacity">*impuestos incluidos*</span>
-        </li>
-      </ul>
-    </div>
-
-    <div class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Adultos Mayores</li>
-        <img src="/proyecto/Cine_web/media/older.jpg" style="width:100%">
-        <li class="w3-padding-16">
           <h2 class="w3-wide">₡2500</h2>
           <span class="w3-opacity">*impuestos incluidos*</span>
         </li>
       </ul>
     </div>
+
+    
   </div>
 
  

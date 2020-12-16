@@ -10,13 +10,18 @@
         
 		$sqlQueryLogin = "call usuarioAutenticacion('$username','$password')";
         $result = $abirCon-> query($sqlQueryLogin);
+        $pelicula = $_GET['peli_id'];
+        
 		if($result->num_rows > 0)
 		{
             $usuario = "";
             while($fila = mysqli_fetch_array($result)){
                 $usuario = $fila["user_name"];
+                
             }
-			header("Location: cine.php?user=$usuario");
+           header("Location: comprar/compra.php?user=$usuario&peli_id=$pelicula");
+           //echo "login exitoso";
+            
 		}
 		else
 		{
@@ -80,11 +85,10 @@
                             </div>
                             <input type="password" class="form-control" placeholder="contraseña" name="password">
                         </div>
-                        <div class="row align-items-center remember">
-                            <input type="checkbox">Recordarme
-                        </div>
+                        
                         <div class="form-group">
-                            <input type="submit" value="Continuar" class="btn float-right login_btn" name="btnLogin">
+                            <input type="submit" value="Continuar" class="btn btn-right login_btn" name="btnLogin">
+                            
                         </div>
                         <div class="row align-items-center">
                         <?php
@@ -103,7 +107,7 @@
                     </form>
                 </div>
                 <div class="card-footer">
-                    <div class="d-flex justify-content-center links text-danger">
+                    <div class="d-flex justify-content-center links">
                         No tienes una cuenta?<a href="registro.php" class="text-danger">Registrarme</a>
                     </div>
                     

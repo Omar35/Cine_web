@@ -32,16 +32,8 @@
     <div class="w3-right w3-hide-small">
       <a href="cartelera.php" class="w3-bar-item w3-button">Cartelera</a>
       <a href="sucursales.php" class="w3-bar-item w3-button">Sucursales</a>
-      <?php
-
-      if(isset($_GET['user']))
-      {	
-        $usuario = $_GET['user'];
-      echo '<p class="w3-bar-item w3-button">Bienvenido ' . $usuario .'</p>';
-      }else{
-        echo '<a href="login.php" class="w3-bar-item w3-button">Iniciar Sesión</a>';
-      }
-      ?>
+      <a href="cine.php" class="w3-bar-item w3-button">Sobre Nosotros</a>
+      
       
     </div>
   </div>
@@ -54,10 +46,7 @@
         <div class="container">
           <h1 class="jumbotron-heading">CINEPLUS Cartelera</h1>
           <p class="lead text-muted">A continuación se muestran las películas disponibles en cartelera.</p>
-          <p>
-            <a href="#" class="btn btn-success">Comprar entradas</a>
-            
-          </p>
+          
         </div>
       </section>
 
@@ -73,6 +62,7 @@
             $result = $abirCon-> query($sqlQueryObtenerInfoPeli);
             if($result->num_rows > 0)
             {
+              $peli_id = 0;
               $nombrePelicula = "";
               $restriccionEdad = "";
               $idioma = "";
@@ -84,16 +74,17 @@
                 $idioma = $fila["idioma"];
                 $duracion = $fila["duracion"];
                 $descripcion = $fila["descripcion"];
+                $peli_id = $fila["id_pelicula"];
 
                 switch ($restriccionEdad) {
                   case $restriccionEdad > 18:
-                    $codigoEdad = "R";
+                    $codigoEdad = "+18";
                     break;
                   case $restriccionEdad > 13:
-                    $codigoEdad = "PG-13";
+                    $codigoEdad = "+13";
                     break;
-                  case $restriccionEdad > 8:
-                    $codigoEdad = "PG";
+                  case $restriccionEdad > 15:
+                    $codigoEdad = "+15";
                     break;
                   default:
                   $codigoEdad = "TP";
@@ -109,6 +100,8 @@
                         <button type="button" class="btn btn-sm btn-outline-secondary">'.$idioma.'</button>
                       </div>
                       <small class="text-muted">'.$duracion.'</small>
+                      <hr>
+                      <a href="login.php?peli_id=' .$peli_id . '" class="btn btn-success">Comprar entradas</a>
                     </div>
                   </div>
                 </div>

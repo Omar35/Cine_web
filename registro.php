@@ -27,7 +27,7 @@
             $sqlQueryRegistrarUsuarioData= "call registrarUsuarioData('$nombre','$apellido1','$apellido2','$telefono','$user_id')";
             
             if($abirCon2-> query($sqlQueryRegistrarUsuarioData)){
-                header("Location: login.php");
+                header("Location: cartelera.php");
             }
             else
             {

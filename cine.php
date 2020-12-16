@@ -11,7 +11,7 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <link rel="stylesheet" href="principal.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <title>Principal</title>
+  <title>Cine</title>
 </head>
 <body>
 
@@ -24,16 +24,8 @@
     <div class="w3-right w3-hide-small">
       <a href="cartelera.php" class="w3-bar-item w3-button">Cartelera</a>
       <a href="sucursales.php" class="w3-bar-item w3-button">Sucursales</a>
-      <?php
-
-      if(isset($_GET['user']))
-      {	
-        $usuario = $_GET['user'];
-      echo '<p class="w3-bar-item w3-button">Bienvenido ' . $usuario .'</p>';
-      }else{
-        echo '<a href="login.php" class="w3-bar-item w3-button">Iniciar Sesión</a>';
-      }
-      ?>
+      <a href="cine.php" class="w3-bar-item w3-button">Sobre Nosotros</a>
+      
       
     </div>
   </div>

@@ -4,9 +4,9 @@
   $conn = OpenCon();
 
 
-  if(isset($_GET['id_peli']))
+  if(isset($_GET['peli_id']))
 	{	
-      $pelicula = $_GET['id_peli'];
+      $pelicula = $_GET['peli_id'];
       //echo "<script>console.log('Debug Objects: " . $pelicula . "' );</script>";
       $tandas = "CALL MostrarTandas($pelicula)"; 
       $listaTandas = $conn -> query($tandas);
@@ -38,6 +38,7 @@
     $proyeccionID = $_POST['cboTandas'];
     $listaAsientos = $_POST['multiAsientos'];
     $cantidadAsientos = count($listaAsientos);
+    
     
     
     //echo "<script>console.log('Debug Objects: " . $listaAsientosString . "' );</script>";
@@ -81,7 +82,7 @@
 
 
   CloseCon($conn);
-  ?>
+?>
   
 <!doctype html>
 <html lang="en">
@@ -96,8 +97,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-<link rel="stylesheet" href="principal.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="principal.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- Bootstrap core CSS -->
     <!--<link href="../css/bootstrap.min.css" rel="stylesheet"> -->
@@ -113,8 +114,9 @@
         <a href="cine.php" class="w3-bar-item w3-button"><b>CINEPLUS</a>
         <!-- Float links to the right. Hide them on small screens -->
         <div class="w3-right w3-hide-small">
-          <a href="cartelera.php" class="w3-bar-item w3-button">Cartelera</a>
-          <a href="sucursales.php" class="w3-bar-item w3-button">Sucursales</a>
+          <a href="../cartelera.php" class="w3-bar-item w3-button">Cartelera</a>
+          <a href="../sucursales.php" class="w3-bar-item w3-button">Sucursales</a>
+          <a href="../cine.php" class="w3-bar-item w3-button">Sobre Nosotros</a>
           <?php
     
           if(isset($_GET['user']))
@@ -132,6 +134,7 @@
 
     <div class="container">
       <div class="py-5 text-center">
+        <hr>
         <h2>Reserva de Boletos</h2>
         <p class="lead">A continuacion podra hacer la reserva de sus boletos</p>
       </div>
@@ -146,12 +149,10 @@
             <div class="mb-3">
               <label for="username">Usuario</label>
               <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">@</span>
-                </div>
+                
                 <?php
 				          
-                  echo "<input type='text' class='form-control' id='username' placeholder='Username' value=" . $usuario ." name='cboUsuario' required>";
+                  echo "<input type='text' class='form-control' id='username' placeholder='Username' value=" . $usuario ." name='user' required>";
 				          				
 				        ?>
                 
@@ -186,8 +187,26 @@
             </div>
             <hr class="mb-4">
             
-            <input type="submit"  class="btn btn-dark" name="btnConfirmarReserva" value="Confirmar Reservar"/>
+            
+            <input type="submit"  class="btn btn-success" name="btnConfirmarReserva" value="Confirmar Reservar" />
             <hr class="mb-4">
+            <?php
+            
+              if(isset($idNewReservaArray)){
+                if( $idNewReservaArray ->num_rows>0)
+                                {
+                  $total = 2500 * $cantidadAsientos;
+                  echo '<div class="alert alert-primary" role="alert">
+                  ' . $usuario .' ha reservado: '. $cantidadAsientos .' asientos. Total a pagar: '. $total .'</div>';
+                }
+              }
+                            
+                        
+            ?>
+            
+            <hr>
+
+            
           </form>
         </div>
       </div>

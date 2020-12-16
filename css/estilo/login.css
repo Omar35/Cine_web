@@ -69,15 +69,15 @@ margin-right: 5px;
 }
 
 .login_btn{
-color: black;
-background-color: #FF3333;
+color: black !important;
+background-color: #FF3333 !important;
 width: 100px;
 }
 
 .login_btn:hover{
-color: black;
-background-color: white;
-}
+    color: black;
+    background-color: white;
+    }
 
 .links{
 color: white;
